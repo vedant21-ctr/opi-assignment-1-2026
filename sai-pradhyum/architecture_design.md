@@ -335,7 +335,7 @@ sequenceDiagram
     NA->>OPI: patch status Ready=False, Reason=ProvisioningFailed, Message=[DPF condition]
     NA->>NA: emit Event Warning TranslationFailed / increment translation_failures_total
     NA-->>User: kubectl describe shows Ready=False + DPF root cause
-    Note over NA: requeue with exponential backoff; no partial DPF objects left orphaned
+    Note over NA: requeue with exponential backoff, no partial DPF objects left orphaned
 ```
 
 Failure principles:
